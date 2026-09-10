@@ -94,3 +94,4 @@ This repository is licensed under **GPL-3.0-only**. See [LICENSE](LICENSE) and t
 - [Collaboration setup and label meanings](docs/community-setup.md)
 - [Foundation validation record](docs/foundation-validation.md)
 - [Project instructions and agent-use workflow](docs/project-instructions.md)
+- [Remaining blockers and maintainer actions](docs/remaining-blockers.md)
