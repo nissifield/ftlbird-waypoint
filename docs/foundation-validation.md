@@ -57,3 +57,8 @@ Documentation changes can be reverted through a reviewed Git change. New issues 
 | Existing work preserved and duplicate issues avoided | PASS | Baseline tree comparison, preserved review, unchanged #1. |
 
 **Overall: CONDITIONAL PASS for the requested foundation.** Documentation and issue content meet the acceptance bar; custom labels, Discussions/category setup, and invitation pinning are documented rather than configured. These limitations do not prevent design feedback through #1 and the invitation issue.
+
+
+## Post-foundation update — GPL-3.0-only and agent-use instructions
+
+This record's earlier licensing observations describe the initial foundation only. A subsequent human maintainer decision adopts GPL-3.0-only through `LICENSE`, `docs/decisions/0001-licensing.md`, README, contribution guidance, and governance updates. The same reviewed change adds `docs/project-instructions.md`, which documents HF-10 routing, HF-01 integration, scoped specialists, HF-09 independent review, HF-11 drafting, and human publication authority. It creates no agent runtime, deployment authority, production control, or security certification.
