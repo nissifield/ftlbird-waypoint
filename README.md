@@ -62,7 +62,7 @@ We welcome interested maintainers, security engineers, self-hosting operators, U
 | Pilot-user discovery | Your non-sensitive needs, current pain points, and what a future evaluation would have to prove. |
 | Documentation and adversarial review | One confusing claim, a clearer explanation, or a counterexample that challenges the design. |
 
-Follow [CONTRIBUTING.md](CONTRIBUTING.md) for small, evidence-backed contributions and the issue-first workflow. Read [GOVERNANCE.md](GOVERNANCE.md) for human decision and release authority.
+Follow [CONTRIBUTING.md](CONTRIBUTING.md) for small, evidence-backed contributions and the issue-first workflow. Read [GOVERNANCE.md](GOVERNANCE.md) for human decision and release authority. Project-controlled AI work follows the [Project Instructions](docs/project-instructions.md); this adds no agent runtime or deployment authority.
 
 ## Not in scope yet
 
@@ -82,7 +82,7 @@ Runtime selection, exact Hummingbird upstream/release and hardware envelope, sec
 
 ## Licensing
 
-No licence has been selected. [A maintainer licensing decision is required — issue #2](https://github.com/nissifield/ftlbird-waypoint/issues/2); the [decision record](docs/decisions/0001-licensing.md) defines the evidence needed. **Substantive code contributions will be enabled once licensing is settled.** Design feedback and discussion remain welcome. This invitation does not establish contribution terms or grant reuse rights.
+This repository is licensed under **GPL-3.0-only**. See [LICENSE](LICENSE) and the recorded [licensing decision](docs/decisions/0001-licensing.md). Contributions are accepted under those terms; contributors must have the right to submit their work and must not add incompatible third-party material.
 
 ## Project map
 
@@ -93,3 +93,4 @@ No licence has been selected. [A maintainer licensing decision is required — i
 - [Platform Contract discussion — issue #1](https://github.com/nissifield/ftlbird-waypoint/issues/1)
 - [Collaboration setup and label meanings](docs/community-setup.md)
 - [Foundation validation record](docs/foundation-validation.md)
+- [Project instructions and agent-use workflow](docs/project-instructions.md)
