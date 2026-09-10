@@ -44,6 +44,6 @@ Use the [security reporting policy](SECURITY.md) for concerns or sensitive findi
 
 ## Licensing and respectful review
 
-No licence has been selected. Substantive code contributions will be enabled once licensing is settled through the [licensing decision](docs/decisions/0001-licensing.md). Design feedback and discussion remain welcome; this invitation does not establish a contribution licence or grant reuse rights. Do not contribute third-party material without appropriate permission.
+Repository material is licensed under **GPL-3.0-only**; see [LICENSE](LICENSE) and the [licensing decision](docs/decisions/0001-licensing.md). By submitting a contribution, you offer it under GPL-3.0-only. Submit only material you have the right to license, retain required third-party notices, and do not add material with incompatible terms. Design feedback and discussion remain welcome.
 
 Challenge ideas with evidence, respect people's time, and explain specialist terms. Maintainers may consolidate duplicate proposals and defer work beyond current capacity. One clear observation is more useful than a large speculative backlog.
