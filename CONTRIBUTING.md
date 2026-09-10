@@ -1,4 +1,4 @@
-# Contributing to Hummingbird Forge
+# Contributing to FTLbird
 
 Welcome. This is a collaborative design and validation effort. You do not need to write code, use AI, or run a server to help.
 
