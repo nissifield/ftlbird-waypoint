@@ -1,27 +1,27 @@
-# Licensing decision required
+# Licensing decision — GPL-3.0-only
 
-**Status: OPEN — maintainer decision required.** No licence is selected by this record.
+**Status: ACCEPTED — implementation pending reviewed merge.**
 
-Discussion: [licensing decision issue #2](https://github.com/nissifield/ftlbird-waypoint/issues/2).
+**Decision authority:** `nissifield`, repository owner and human maintainer.  
+**Decision:** Repository material is licensed under **GPL-3.0-only**.
 
-## Evidence and scope
+## Scope and rationale
 
-Repository inspection on 10 September 2026 found only the initial README on `main`, no licence file, and no licensing decision in the existing Platform Contract issue. The supplied architecture and agent records require licence review but do not choose a project licence.
+The project is public and expects design feedback plus future code contributions. GPL-3.0-only preserves the requested copyleft direction while the project remains design-stage. This decision does not make the platform implemented, approve a release, create a legal entity, or settle trademark policy.
 
-A public repository is not evidence of a settled licensing policy. Substantive code contributions will be enabled once licensing is settled. Design feedback and discussion remain welcome; no contribution licence is implied.
+The decision covers repository material unless an individual file states otherwise. Contributors must have the right to submit their work and, by submitting it, offer it under GPL-3.0-only. Existing rights are not assumed beyond what contributors have granted; third-party notices and compatibility remain the contributor and maintainer's responsibility.
 
-## Decision requested
+## Implementation evidence
 
-A human maintainer must record the intended rights and obligations for code and documentation, evaluate suitable licences, and decide whether one licence or separate licences best fits the project. Consider contribution terms, reuse and redistribution, dependency and image licences, compatibility, notices, and branding separately. Obtain qualified advice where needed.
+- [ ] The reviewed change adds the canonical GPLv3 text at [LICENSE](../../LICENSE).
+- [ ] README, contribution guidance, and governance state the adopted terms consistently.
+- [ ] Issue #2 records the decision and links the merged change.
+- [ ] Dependency, image, documentation, and branding obligations are addressed before relevant materials are accepted or released.
 
-This record recommends no named licence. Deferring the decision allows design discussion to continue but leaves substantive code contributions blocked. Settling it now clarifies participation terms before code work starts.
+## Open legal and operational boundaries
 
-## Acceptance evidence
+- No contributor licence agreement, legal entity, trademark policy, or warranty promise is created by this record.
+- Future dependencies, images, documentation imports, and branding assets require compatibility and notice review.
+- A future licence change cannot be assumed to revoke rights already granted.
 
-- [ ] A named human maintainer records the choice, rationale, scope, and review link.
-- [ ] The approved licence text and required notices are added in a reviewed change.
-- [ ] README and contribution guidance accurately explain the adopted terms.
-- [ ] The treatment of existing and future contributions is explicit; no retroactive consent is assumed.
-- [ ] Dependency, image, documentation, and branding obligations are addressed or assigned as tracked unknowns.
-
-The latest safe decision point is before accepting substantive code contributions. Revisions must preserve the prior decision and identify rights already granted; do not assume a licence change can retract them.
+The latest safe decision point was before accepting substantive code contributions. Human review and merge of the implementation change are required before treating this record as effective on the default branch.
