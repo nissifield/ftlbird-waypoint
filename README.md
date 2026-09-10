@@ -1,14 +1,16 @@
-# Hummingbird Forge
+# FTLbird
 
 > **Design-stage project — not a working product.** No deployment artefacts, production service, tested enforcement, or production-security guarantee exists in this repository.
 
-**A proposed way for ordinary organisations and families to run private collaboration without becoming system administrators: one Hummingbird host, curated capability packs, private-by-default access, and optional AI under human authority.**
+**Naming note:** FTLbird names this design-stage project. Fedora Hummingbird names its sole proposed host operating-system target.
+
+**A proposed way for ordinary organisations and families to run private collaboration without becoming system administrators: one Fedora Hummingbird host, curated capability packs, private-by-default access, and optional AI under human authority.**
 
 ## In two minutes
 
 ### What it is
 
-Hummingbird Forge is a collaborative **design and evidence** effort for a single-target self-hosting platform. The intended platform would combine a sole supported Hummingbird host with lifecycle-managed capability packs, reproducible operations, and private remote access through Tailscale.
+FTLbird is a collaborative **design and evidence** effort for a single-target self-hosting platform. The intended platform would combine a sole supported Fedora Hummingbird host with lifecycle-managed capability packs, reproducible operations, and private remote access through Tailscale.
 
 ### What it is not
 
@@ -27,13 +29,13 @@ Start with the **[Platform Contract — issue #1](https://github.com/nissifield/
 
 ## The proposed ecosystem
 
-Diagram summary: future ordinary operators would use Hummingbird Forge and curated packs. Human maintainers retain authority; an optional AI contractor may prepare bounded work but has no authority over the platform. Every box describes a design requirement or an unimplemented future control, not a deployed service.
+Diagram summary: future ordinary operators would use FTLbird and curated packs. Human maintainers retain authority; an optional AI contractor may prepare bounded work but has no authority over the platform. Every box describes a design requirement or an unimplemented future control, not a deployed service.
 
 ```mermaid
 flowchart TB
     status["STATUS: design stage only — no service, enforcement, or product is deployed"]
     operators["Ordinary operators — future intended users"]
-    forge["Hummingbird Forge — BINDING DESIGN REQUIREMENTS: one Hummingbird host; reproducible operations; private by default"]
+    forge["FTLbird — BINDING DESIGN REQUIREMENTS: one Fedora Hummingbird host; reproducible operations; private by default"]
     packs["Curated capability packs — BINDING: lifecycle-managed products, not arbitrary containers"]
     maintainers["Human maintainers — BINDING: standards, review, and release authority"]
     ai["Optional AI contractor — BINDING LIMIT: temporary, task-scoped, and under named human authority"]
@@ -62,7 +64,7 @@ flowchart TB
     firewall["Host firewall — BINDING: separate defense layer"]
     identity["Application identity and roles — BINDING: separate access control"]
     recovery["Restricted break-glass recovery — BINDING: separate, bounded path"]
-    host["Hummingbird host — sole supported future target"]
+    host["Fedora Hummingbird host — sole supported future target"]
     official["Official sources — future trust level requiring maintainer review"]
     private["Private sources — BINDING: private does not automatically mean trusted"]
     git["Git source and review — BINDING: source-trust boundary"]
@@ -135,11 +137,11 @@ flowchart LR
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the evidence standard and safe contribution boundaries. Do not open another umbrella issue for the Platform Contract.
 
-## Binding design requirements
+## Architectural commitments
 
 The following are commitments for future implementation, **not claims that controls already exist**:
 
-1. **One supported host:** Hummingbird is the sole supported host target unless maintainers make an explicit architecture decision.
+1. **One supported host:** Fedora Hummingbird is the sole supported host target unless maintainers make an explicit architecture decision.
 2. **Private remote access:** Tailscale is the private remote-access layer; public exposure is off by default. It does not replace host firewalling, application authentication/roles, or restricted break-glass recovery.
 3. **AI-free core operations:** install, normal use, updates, backup, restore, rollback, removal, and end-of-life must work without AI.
 4. **Lifecycle-managed packs:** every capability pack is a maintained product with declared provenance, compatibility, support, privileges, data handling, and its complete lifecycle.
