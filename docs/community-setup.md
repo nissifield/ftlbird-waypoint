@@ -27,7 +27,7 @@ Suggested initial application: #1 gets `status: design`, `area: platform-contrac
 
 ## Invitation and Discussions
 
-The foundation uses one community invitation issue titled **[Help shape Hummingbird Forge before implementation begins — #3](https://github.com/nissifield/ftlbird-waypoint/issues/3)**. A maintainer can pin that issue when the repository interface permits. Pinning is not completed by this change.
+The foundation uses one community invitation issue titled **[Help shape FTLbird before implementation begins — #3](https://github.com/nissifield/ftlbird-waypoint/issues/3)**. A maintainer can pin that issue when the repository interface permits. Pinning is not completed by this change.
 
 Discussions remain disabled. Do not create a parallel forum merely to duplicate #1. If maintainers later enable Discussions and can moderate them, the proposed categories are:
 
