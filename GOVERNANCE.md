@@ -37,4 +37,4 @@ Git holds source and review history; OCI registries distribute images and immuta
 
 Prioritise the Platform Contract before a pack catalogue. Before accepting future release obligations, identify a responsible human, support scope, lifecycle evidence, and an end-of-life path. Do not promise support dates or incident response times without capacity. Maintainers can narrow, defer, or retire proposed work with a recorded explanation.
 
-The [licensing decision](docs/decisions/0001-licensing.md) remains open. Nothing here selects a licence, contributor agreement, legal entity, or trademark policy. [Contribution guidance](CONTRIBUTING.md) and [security reporting](SECURITY.md) define the current public entry points.
+The project licence is **GPL-3.0-only**, recorded in [LICENSE](LICENSE) and the [licensing decision](docs/decisions/0001-licensing.md). No contributor agreement, legal entity, or trademark policy is established by that decision. [Contribution guidance](CONTRIBUTING.md), [project instructions](docs/project-instructions.md), and [security reporting](SECURITY.md) define the current public entry points.
