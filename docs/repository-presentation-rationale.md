@@ -1,6 +1,6 @@
 # Repository presentation rationale
 
-**Status: design-stage documentation.** This page explains the public presentation of Hummingbird Forge. It does not create a platform, configure GitHub, establish enforcement, select a licence, or make a security claim.
+**Status: design-stage documentation.** This page explains the public presentation of FTLbird. It does not create a platform, configure GitHub, establish enforcement, select a licence, or make a security claim.
 
 ## Purpose
 
