@@ -1,11 +1,11 @@
-> **Historical design review, 9 September 2026.** The original supplied review follows unchanged. Its ratings, recommendations, illustrative schema, control flows, and MVP gates are design material, not implemented controls or deployment instructions. Runtime examples are unadopted candidates. Technical references have not been revalidated for platform compatibility in this documentation task. The current scope is Platform Contract v0.1; see the [architecture guide](architecture.md).
+> **Historical design review, terminology updated 10 September 2026.** The review is preserved except for terminology changes that distinguish **FTLbird** (the project) from **Fedora Fedora Hummingbird** (the proposed host target). Its ratings, recommendations, illustrative schema, control flows, and MVP gates are design material, not implemented controls or deployment instructions. Runtime examples are unadopted candidates. Technical references have not been revalidated for platform compatibility in this documentation task. The current scope is Platform Contract v0.1; see the [architecture guide](architecture.md).
 
-# Hummingbird Forge Architecture Review
+# FTLbird Architecture Review
 
 **Document status:** Design review  
 **Review perspective:** Senior AI and platform architecture  
 **Date:** 9 September 2026  
-**Proposed target:** Hummingbird only  
+**Proposed target:** Fedora Hummingbird only  
 **Primary audience:** Offices, small businesses, community organisations, and families with average technical skills
 
 ## 1. Executive Summary
@@ -16,11 +16,11 @@
 
 The concept is technically credible and has a coherent product identity:
 
-> Hummingbird Forge is a single-target self-hosting platform that gives ordinary organisations private collaboration services while using AI only as temporary, task-scoped technical assistance.
+> FTLbird is a single-target self-hosting platform that gives ordinary organisations private collaboration services while using AI only as temporary, task-scoped technical assistance.
 
 The architecture is strongest where it deliberately limits complexity:
 
-- One supported host platform: Hummingbird.
+- One supported host platform: Fedora Hummingbird.
 - One supported private connectivity layer: Tailscale.
 - Curated capability packs rather than arbitrary container templates.
 - Human-approved, auditable changes.
@@ -44,7 +44,7 @@ The greatest architectural risk is not the selection of an LLM. It is sustaining
 
 ## 2. Product Intent
 
-Hummingbird Forge is intended for people who want the outcomes normally associated with managed cloud services without surrendering routine control of their applications and data.
+FTLbird is intended for people who want the outcomes normally associated with managed cloud services without surrendering routine control of their applications and data.
 
 It should allow a household or small organisation to obtain capabilities such as:
 
@@ -66,7 +66,7 @@ The defining principle is:
 
 ### 3.1 One supported target
 
-Hummingbird is the only supported host target. This is a positive constraint because it permits maintainers to test one operating-system baseline, container runtime, filesystem layout, firewall model, secret-management interface, update path, and recovery procedure.
+Fedora Hummingbird is the only supported host target. This is a positive constraint because it permits maintainers to test one operating-system baseline, container runtime, filesystem layout, firewall model, secret-management interface, update path, and recovery procedure.
 
 The target must nevertheless be defined as a versioned platform contract. “Fedora with scripts” is not a sufficiently stable target definition.
 
@@ -74,7 +74,7 @@ The target must nevertheless be defined as a versioned platform contract. “Fed
 
 Tailscale is the standard remote connectivity mechanism. Services should normally remain unavailable from the public internet and be presented only to approved users and devices through the tailnet.
 
-Tailscale grants can express access using users, groups, devices, destinations, protocols, ports, and supported application capabilities. Hummingbird should generate and validate policy proposals appropriate to each installed capability pack.
+Tailscale grants can express access using users, groups, devices, destinations, protocols, ports, and supported application capabilities. FTLbird should generate and validate policy proposals appropriate to each installed capability pack.
 
 Tailscale is not the complete security boundary. Host firewall policy, application authentication, application-level roles, and local recovery controls remain necessary.
 
@@ -110,7 +110,7 @@ Project maintainers define standards, review official releases, maintain compati
 | User experience | Install, configure, update, restore, inspect status, and request assistance |
 | Pack manager | Validate, install, update, roll back, remove, and report on capability packs |
 | Policy engine | Enforce repository trust, container privileges, network exposure, AI permissions, and approval requirements |
-| Container runtime | Run services through one Hummingbird-supported mechanism |
+| Container runtime | Run services through one Fedora Hummingbird-supported mechanism |
 | Private access | Combine Tailscale, host firewall policy, service presentation, and application authentication |
 | Software supply chain | Retrieve source and artifacts from Git and OCI-compatible public or private services |
 | Secrets broker | Supply narrowly scoped credentials without placing secrets in Git, YAML, logs, or AI context |
@@ -121,12 +121,12 @@ Project maintainers define standards, review official releases, maintain compati
 ### Recommended control flow
 
 1. The operator chooses a capability or defines a maintenance task.
-2. Hummingbird resolves the approved source and immutable pack version.
+2. FTLbird resolves the approved source and immutable pack version.
 3. The policy engine validates provenance, permissions, network exposure, storage requirements, and compatibility.
 4. Secrets are resolved through the secrets broker without entering the pack source.
 5. The pack manager prepares a proposed deployment plan.
 6. The operator reviews material changes.
-7. Hummingbird deploys through the supported container runtime.
+7. FTLbird deploys through the supported container runtime.
 8. Health, backup, and access-control checks run.
 9. The deployment is committed to the local desired-state record.
 10. Failure triggers rollback or a clearly defined recovery state.
@@ -135,7 +135,7 @@ Project maintainers define standards, review official releases, maintain compati
 
 | Risk | Severity | Architectural response |
 | --- | --- | --- |
-| Undefined Hummingbird platform contract | Critical | Publish a versioned platform contract before defining the pack ecosystem |
+| Undefined FTLbird Platform Contract | Critical | Publish a versioned platform contract before defining the pack ecosystem |
 | AI modifying running containers directly | Critical | Allow inspection, but require durable changes to become declarative configuration or derived images |
 | Untrusted private or community content | Critical | Require source trust levels, schema validation, digest pinning, signatures, and privilege inspection |
 | Secret exposure to repositories or AI providers | Critical | Use a secrets broker, redaction, scoped credentials, and provider-independent context controls |
@@ -164,7 +164,7 @@ Emergency repair sessions may be supported, but they must be temporary, logged, 
 
 ### 6.2 Separate Git sources from OCI distribution
 
-Hummingbird must distinguish between:
+FTLbird must distinguish between:
 
 - **Git repositories:** source configuration, pack definitions, documentation, customisation, and review history.
 - **OCI registries:** immutable released pack artifacts and container images.
@@ -179,11 +179,11 @@ Recommended release model:
 
 Private Git repositories and private OCI registries should both be supported, but their credentials must remain outside YAML and Git history.
 
-### 6.3 Publish the Hummingbird Platform Contract
+### 6.3 Publish the FTLbird Platform Contract
 
-`Hummingbird Platform Contract v0.1` should define:
+`FTLbird Platform Contract v0.1` should define:
 
-- Supported Hummingbird release and upgrade policy.
+- Supported Fedora Hummingbird release and upgrade policy.
 - Supported CPU architecture and hardware envelope.
 - Container runtime and version policy.
 - Supported deployment representation.
@@ -198,9 +198,9 @@ Private Git repositories and private OCI registries should both be supported, bu
 - Update, migration, rollback, and removal behaviour.
 - Local recovery and break-glass procedures.
 
-Podman with systemd Quadlet is a strong candidate for a Fedora-based platform because Quadlet integrates container, image, network, pod, and volume definitions with systemd. This is an architectural recommendation, not a confirmed Hummingbird implementation decision.
+Podman with systemd Quadlet is a strong candidate for a Fedora-based platform because Quadlet integrates container, image, network, pod, and volume definitions with systemd. This is an architectural recommendation, not a confirmed Fedora Hummingbird implementation decision.
 
-A user-friendly `pack.yaml` may remain the authoring format while Hummingbird translates validated pack intent into the selected runtime representation.
+A user-friendly `pack.yaml` may remain the authoring format while FTLbird translates validated pack intent into the selected runtime representation.
 
 ### 6.4 Introduce a policy engine
 
@@ -214,7 +214,7 @@ The pack manager should not install whatever a pack requests. A separate policy 
 - Network exposure.
 - Secret requests.
 - AI permissions.
-- Compatibility with the installed Hummingbird version.
+- Compatibility with the installed Fedora Hummingbird version.
 - Required operator approvals.
 
 Unsafe or unsupported requests should fail closed with an understandable explanation.
@@ -251,7 +251,7 @@ capability-pack/
 Each pack should declare:
 
 - Pack identifier, version, publisher, and schema version.
-- Compatible Hummingbird versions.
+- Compatible Fedora Hummingbird versions.
 - Required CPU, memory, storage, and architecture.
 - Container images pinned to immutable digests.
 - Persistent-data paths and ownership.
@@ -271,7 +271,7 @@ Each pack should declare:
 
 | Level | Definition | Default treatment |
 | --- | --- | --- |
-| Official | Reviewed, tested, signed, and maintained by Hummingbird Forge maintainers | Installable after normal plan review |
+| Official | Reviewed, tested, signed, and maintained by FTLbird maintainers | Installable after normal plan review |
 | Approved private | Controlled by an organisation and explicitly trusted by its owner | Installable after validation against local policy |
 | Community | Published by a third party without official support | Require warnings, elevated review, and policy checks |
 | Unknown | Unverified source or unresolved provenance | Reject by default |
@@ -280,7 +280,7 @@ A source being private does not make it trustworthy. Trust must be granted delib
 
 ## 8. Tailscale Security Model
 
-Tailscale should run at the Hummingbird host layer for the first supported architecture. Capability-pack containers remain on private container networks, while an approved gateway presents selected services to the tailnet.
+Tailscale should run at the Fedora Hummingbird host layer for the first supported architecture. Capability-pack containers remain on private container networks, while an approved gateway presents selected services to the tailnet.
 
 Recommended controls:
 
@@ -320,7 +320,7 @@ The gateway must enforce:
 ### Proposed work-order format
 
 ```yaml
-apiVersion: hummingbird-forge/v1alpha1
+apiVersion: ftlbird/v1alpha1
 kind: AIWorkOrder
 metadata:
   name: upgrade-document-service
@@ -362,7 +362,7 @@ The system prompt, work order, policy decision, and tool permissions must be con
 
 Maintainers are responsible for:
 
-- Defining the Hummingbird Platform Contract.
+- Defining the FTLbird Platform Contract.
 - Versioning the capability-pack schema.
 - Reviewing and signing official releases.
 - Testing installation, update, migration, restoration, rollback, and removal.
@@ -381,7 +381,7 @@ The MVP should contain one complete **Private Collaboration Pack** and should pr
 
 ### MVP scope
 
-- One Hummingbird version.
+- One Fedora Hummingbird version.
 - One CPU architecture.
 - One tested hardware class or narrow hardware envelope.
 - One supported container-runtime model.
@@ -399,7 +399,7 @@ The MVP should contain one complete **Private Collaboration Pack** and should pr
 ### Explicit exclusions
 
 - Multiple Linux distributions.
-- Kubernetes clusters unless selected as the single Hummingbird runtime model.
+- Kubernetes clusters unless selected as the single Fedora Hummingbird runtime model.
 - Public marketplace scale.
 - Autonomous production remediation.
 - Unattended AI changes.
@@ -413,12 +413,12 @@ The MVP is not complete until all of the following have been demonstrated.
 
 ### Platform and lifecycle
 
-- [ ] A clean Hummingbird system can install the pack without AI.
+- [ ] A clean Fedora Hummingbird system can install the pack without AI.
 - [ ] The application remains usable during ordinary operation without AI.
 - [ ] Configuration is reproducible from declared desired state.
 - [ ] Persistent data survives container replacement.
 - [ ] A failed update rolls back to a known working version.
-- [ ] The complete service can be restored onto a clean Hummingbird system.
+- [ ] The complete service can be restored onto a clean Fedora Hummingbird system.
 - [ ] Pack removal preserves or deliberately disposes of data according to operator choice.
 
 ### Network and identity
@@ -458,7 +458,7 @@ The MVP is not complete until all of the following have been demonstrated.
 
 ## 13. Recommended Work Sequence
 
-1. Publish `Hummingbird Platform Contract v0.1`.
+1. Publish `FTLbird Platform Contract v0.1`.
 2. Define the threat model and trust boundaries.
 3. Define `Capability Pack Specification v0.1` and its machine-validatable schema.
 4. Define repository trust, signing, and secrets policies.
@@ -473,11 +473,11 @@ The MVP is not complete until all of the following have been demonstrated.
 
 ## 14. Final Architectural Position
 
-Hummingbird Forge is worth pursuing. Its defensible value does not come from YAML, containers, Tailscale, or access to multiple LLM providers in isolation.
+FTLbird is worth pursuing. Its defensible value does not come from YAML, containers, Tailscale, or access to multiple LLM providers in isolation.
 
 Its value is the maintained trust layer joining them:
 
-> Hummingbird Forge turns self-hosting into a supported product by combining curated capability packs, safe private access, reproducible operations, trusted software delivery, and temporary AI expertise under human authority.
+> FTLbird turns self-hosting into a supported product by combining curated capability packs, safe private access, reproducible operations, trusted software delivery, and temporary AI expertise under human authority.
 
 The project should define its platform contract, capability-pack specification, trust model, and recovery model before selecting or integrating a broad set of applications.
 
@@ -491,4 +491,4 @@ The project should define its platform contract, capability-pack specification, 
 
 ---
 
-This review distinguishes established platform behaviour documented by the referenced projects from proposed Hummingbird Forge design decisions. Product names, schemas, trust levels, and control flows described here remain design proposals until formally adopted and implemented.
+This review distinguishes established platform behaviour documented by the referenced projects from proposed FTLbird design decisions. Product names, schemas, trust levels, and control flows described here remain design proposals until formally adopted and implemented.

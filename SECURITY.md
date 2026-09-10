@@ -2,7 +2,7 @@
 
 ## Current status
 
-Hummingbird Forge is an unimplemented, design-stage project. No production platform or official capability pack is currently released. There are no supported production versions and no production-security guarantees. Architectural controls described in this repository are requirements or proposals, not evidence of enforcement.
+FTLbird is an unimplemented, design-stage project. No production platform or official capability pack is currently released. There are no supported production versions and no production-security guarantees. Architectural controls described in this repository are requirements or proposals, not evidence of enforcement.
 
 ## Report concerns privately
 

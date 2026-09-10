@@ -18,7 +18,7 @@ AI can prepare proposals and evidence. It is never a permanent administrator, de
 4. A human maintainer records the outcome and rationale: accepted, needs revision, deferred, or rejected. Significant choices become versioned architecture decision records linked to their review and named human decision-maker.
 5. Revisions link to the prior decision, explain new evidence and compatibility/recovery consequences, and require fresh human review. Never silently overwrite decision history.
 
-The [README commitments](README.md#architectural-commitments) bind current work. Expanding beyond Hummingbird or changing another binding constraint requires an explicit human architecture decision; no such expansion is authorised here. Contributors may challenge a decision without assuming it has changed.
+The [README commitments](README.md#architectural-commitments) bind current work. Expanding beyond Fedora Hummingbird or changing another binding constraint requires an explicit human architecture decision; no such expansion is authorised here. Contributors may challenge a decision without assuming it has changed.
 
 ## Intended source trust levels
 
