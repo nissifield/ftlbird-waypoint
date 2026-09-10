@@ -1,16 +1,18 @@
 # Architecture guide
 
-Start with the [original Hummingbird Forge Architecture Review](hummingbird-forge-architecture-review.md), dated 9 September 2026, then contribute to [Platform Contract issue #1](https://github.com/nissifield/ftlbird-waypoint/issues/1).
+Start with the [FTLbird Architecture Review](ftlbird-architecture-review.md), dated 9 September 2026, then contribute to [Platform Contract issue #1](https://github.com/nissifield/ftlbird-waypoint/issues/1).
 
 ## What is established and what is open
 
 **FACT — repository evidence:** the project began with a design-stage README and Platform Contract issue #1. The supplied review calls for controlled design and validation before implementation. Its original text is preserved with a status banner, not silently revised.
 
-**DECISION — current project constraints:** Hummingbird is the sole supported host target; Tailscale is the private remote-access layer, with public exposure off by default. Host firewalling, application authentication/roles, and bounded break-glass recovery remain separate requirements. Every routine lifecycle operation must work without AI. See the complete [binding commitments](../README.md#architectural-commitments).
+**Terminology:** FTLbird names this project; Fedora Hummingbird names the sole proposed host operating-system target.
+
+**DECISION — current project constraints:** Fedora Hummingbird is the sole supported host target; Tailscale is the private remote-access layer, with public exposure off by default. Host firewalling, application authentication/roles, and bounded break-glass recovery remain separate requirements. Every routine lifecycle operation must work without AI. See the complete [binding commitments](../README.md#architectural-commitments).
 
 **PROPOSAL:** the review's layers, runtime candidates, pack format, gateway placement, secrets broker, signing mechanisms, and eventual one-pack MVP are candidates for assessment. Words such as “enforce” and “verify” in its target architecture describe required future behaviour. They are not evidence that any control exists today.
 
-**UNKNOWN:** the exact upstream identity and supported release of Hummingbird, CPU/hardware envelope, selected runtime and representation, verified compatibility, and production enforcement. Contributors must identify primary sources and versions in #1 before a human maintainer adopts these choices. Similar project names or a Fedora-related example do not establish the supported target.
+**UNKNOWN:** the exact supported Fedora Hummingbird image reference and release policy, CPU/hardware envelope, selected runtime and representation, verified compatibility, and production enforcement. Contributors must identify primary sources and versions in #1 before a human maintainer adopts these choices.
 
 **RISK:** private applications can still depend on external connectivity and coordination services. Recovery during internet or Tailscale outages must be designed and evaluated without weakening application authentication. Self-hosted data does not imply independence from every external service.
 
